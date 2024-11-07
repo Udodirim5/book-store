@@ -1,0 +1,273 @@
+:root {
+  --Primary-Dark-Olive: #3a4a1f50;
+  --Lighter-Shade: #8FBC8F;
+  --Accent-Shade: #C5E1A5;
+  --Darker-Shade: #3A4A1F;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--Primary-Dark-Olive);
+  color: var(--Darker-Shade);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #C1C6B8;
+  z-index: 1;
+  box-shadow: 0 0 10px var(--Darker-Shade);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+nav h1 {
+  font-size: 36px;
+}
+
+nav form {
+  text-align: left;
+  padding: 10px;
+  width: 300px;
+  font-size: 12px;
+  border-radius: 10px;
+  border: 2px solid var(--Darker-Shade);
+}
+
+nav :is(input, button) {
+  all: unset;
+}
+
+nav input {
+  width: 100%;
+}
+
+nav button {
+  border: 2px solid var(--Darker-Shade);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button span {
+  margin-left: 5px;
+  color: #fd2121;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  background-color: var(--Lighter-Shade);
+  padding: 10px;
+  border-right: 2px solid var(--Darker-Shade);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cart-container {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+
+.cart-book-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--Darker-Shade);
+  border-radius: 10px;
+  background-color: var(--Light-Shade);
+  padding: 10px;
+  margin: 10px 0;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+.cart-book-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cart-book-card-img {
+  width: 60px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-book-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-book-card-content {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.cart-book-card-content h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--Darker-Shade);
+}
+
+.cart-book-card .price-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.cart-book-card .price-cart p {
+  margin: 0;
+  color: var(--Primary-Color);
+}
+
+.remove-from-cart {
+  all: unset;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--Danger-Color);
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.remove-from-cart:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+main {
+  padding: 10px;
+  margin-top: 60px;
+}
+
+.popular-books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px;
+}
+
+.book-card {
+  border: 1px solid var(--Darker-Shade);
+  padding: 30px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.book-card h3 {
+  margin: 10px 0;
+}
+
+.price-cart {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-to-cart {
+  background-color: var(--Primary-Dark-Olive);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: all 300ms ease;
+}
+
+.add-to-cart:hover {
+  cursor: pointer;
+  background-color: var(--Accent-Shade);
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: var(--Primary-Color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-price button {
+  all: unset;
+  background-color: var(--Primary-Dark-Olive);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 300ms ease;
+}
+
+.total-price button:hover {
+  cursor: pointer;
+  background-color: var(--Accent-Shade);
+}
+
+.promo-form {
+  display: flex;
+  text-align: left;
+  border-radius: 10px;
+  border: 2px solid var(--Darker-Shade);
+  overflow: hidden;
+}
+
+.promo-form input {
+  all: unset;
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.promo-form button {
+  all: unset;
+  padding: 5px 10px;
+}
+
+.promo-form input:focus {
+  background-color: var(--Darker-Shade);
+  color: var(--Accent-Shade);
+}
